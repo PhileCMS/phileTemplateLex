@@ -76,7 +76,11 @@ class Lex implements TemplateInterface {
 
 			Event::triggerEvent('template_engine_registered', array('engine' => &$parser));
 
-			$template = ($this->page->getMeta()->get('template') !== null) ? $this->page->getMeta()->get('template') : 'index';
+			if ($this->page->getMeta()->get('template') !== null && file_exists(THEMES_DIR . $this->page->getMeta()->get('template').'.html')) {
+				$template = $this->page->getMeta()->get('template');
+			} else {
+				$template = 'index';
+			}
 			$output = $parser->parse(file_get_contents($data['theme_dir'] . '/' . $template . '.lex'), $data);
 		}
 		return $output;
