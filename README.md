@@ -3,9 +3,16 @@ phileTemplateLex
 
 Use the [Lex](https://github.com/pyrocms/lex) parser in your templates for [PhileCMS](https://github.com/PhileCMS/Phile)
 
-### Installation
+### 1.1 Installation (composer)
+```
+php composer.phar require phile/template-lex:*
+```
 
-[Download this file](https://github.com/PhileCMS/phileTemplateLex/archive/master.zip "Download ZIP File") and drop it into the root Phile installation directory.
+### 1.2 Installation (Download)
+
+* Install the latest version of [Phile](https://github.com/PhileCMS/Phile)
+* Clone this repo into `plugins/phile/templateLex`
+* add `$config['plugins']['phile\\templateLex'] = array('active' => true);` to your `config.php`
 
 #### Install Lex via composer
 
@@ -28,9 +35,9 @@ Modify your `config.php` file:
 ```php
 $config['plugins'] = array(
   // disable the Twig template engine
-  'phileTemplateTwig' => array('active' => false),
+  'phile\\templateTwig' => array('active' => false),
   // enable the Lex template engine
-  'phileTemplateLex' => array('active' => true)
+  'phile\\templateLex' => array('active' => true)
 );
 ```
 

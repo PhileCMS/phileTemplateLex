@@ -1,9 +1,10 @@
 <?php
 
-namespace Phile\Template;
+namespace Phile\Plugin\Phile\TemplateLex\Template;
 
 use Phile\Registry;
 use Phile\Event;
+use Phile\ServiceLocator\TemplateInterface;
 
 class Lex implements TemplateInterface {
 	/**
