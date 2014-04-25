@@ -12,7 +12,14 @@ php composer.phar require phile/template-lex:*
 
 * Install the latest version of [Phile](https://github.com/PhileCMS/Phile)
 * Clone this repo into `plugins/phile/templateLex`
-* add `$config['plugins']['phile\\templateLex'] = array('active' => true);` to your `config.php`
+
+### 2. Activation
+
+After you have installed the plugin. You need to add the following line to your `config.php` file:
+
+```
+$config['plugins']['phile\\templateLex'] = array('active' => true);
+```
 
 #### Install Lex via composer
 
